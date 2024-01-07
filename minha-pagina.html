@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- // React -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    
+    <!-- // Compilador -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/jsx">
+
+        function Header(props) {
+
+            return (
+                <h1>{props.title ? props.title : 'Nenhum título'}</h1>
+            )
+        }
+
+        
+        
+        function App() {
+            
+            // JSX
+            return (
+                <div>
+                    <Header title="Header 1" />
+                    <Header title="" />
+                    <p>Página de teste</p>
+                    <img width="200" src="https://cdn-icons-png.flaticon.com/512/5969/5969113.png" />
+                </div>
+            )
+        }
+        
+        // Start
+        const div = document.getElementById("root");
+        const app = ReactDOM.createRoot(div);
+        app.render(<App />);
+
+    </script>
+</body>
+</html>
